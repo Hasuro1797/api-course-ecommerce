@@ -1,0 +1,86 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  email: String!
+  name: String!
+  lastName: String!
+  role: String!
+}
+
+type Student {
+  email: String!
+  name: String!
+  lastName: String!
+  role: String!
+  address: String!
+  phone: String!
+}
+
+type Instructor {
+  email: String!
+  name: String!
+  lastName: String!
+  role: String!
+  specialty: String!
+  birthday: String!
+}
+
+type Auth {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  user(id: Int!): User!
+  auth(id: Int!): Auth!
+}
+
+type Mutation {
+  createStudent(createStudentInput: CreateStudentInput!): Student!
+  createInstructor(createInstructorInput: CreateInstructorInput!): Instructor!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+  createAuth(createAuthInput: CreateAuthInput!): Auth!
+  updateAuth(updateAuthInput: UpdateAuthInput!): Auth!
+  removeAuth(id: Int!): Auth!
+}
+
+input CreateStudentInput {
+  email: String!
+  name: String!
+  lastName: String!
+  role: String
+  address: String
+  phone: String
+  birthday: String
+}
+
+input CreateInstructorInput {
+  email: String!
+  name: String!
+  lastName: String!
+  role: String
+  address: String
+  phone: String
+}
+
+input UpdateUserInput {
+  email: String
+  name: String
+  lastName: String
+  role: String
+  id: Int!
+}
+
+input CreateAuthInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateAuthInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
